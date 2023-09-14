@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 import { FaReadme } from "react-icons/fa";
 
-const Card = ({ card }) => {
+const Card = ({ card, handleBtn }) => {
   const { course_name, credit, details, image, price } = card;
   return (
     <div>
-      <div className="card h-[460px] bg-base-100 shadow-xl">
+      <div className="card h-[500px] bg-base-100 shadow-xl">
         <figure className="pt-4">
           <img src={image} alt="image" className="rounded-xl" />
         </figure>
@@ -22,7 +22,7 @@ const Card = ({ card }) => {
               <p>Credit: {credit}hr</p>
             </div>
           </div>
-          <button className="btn btn-primary w-full">Buy Now</button>
+          <button onClick={()=>handleBtn(card)} className="btn bg-sky-500  text-white hover:bg-sky-400 w-full">Select</button>
         </div>
       </div>
     </div>
@@ -30,5 +30,6 @@ const Card = ({ card }) => {
 };
 Card.propTypes = {
   card: PropTypes.object.isRequired,
+  handleBtn: PropTypes.func.isRequired
 };
 export default Card;
