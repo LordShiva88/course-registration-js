@@ -7,7 +7,8 @@ import { useEffect } from "react";
 function App() {
   const [cards, setCardsData] = useState([]);
   const [carts, setCart] = useState([]);
-  const [credit, setCredit] = useState();
+  const [credit, setCredit] = useState(0);
+  const [remaining, setRemaining] = useState(20);
 
   useEffect(() => {
     fetch("data.json")
@@ -24,6 +25,11 @@ function App() {
     } else {
       cartItem.forEach((cartCredit) => {
         credit = credit + cartCredit.credit;
+        const remaining = 20 - credit;
+        if(credit > 20){
+          return alert('You Have No Credit')
+        }
+        setRemaining(remaining)
         setCredit(credit);
       });
       setCart(cartItem);
@@ -42,7 +48,11 @@ function App() {
           ))}
         </div>
         <div className="lg:w-1/4">
-          <Cart carts={carts} credit={credit}></Cart>
+          <Cart 
+          carts={carts} 
+          credit={credit}
+          remaining={remaining}
+          ></Cart>
         </div>
       </div>
     </div>
