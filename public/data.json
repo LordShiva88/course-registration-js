@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/SBXLRG2/Rectangle-2.png",
+    "credit": 3,
+    "course_name": "Introduction to Python Programming",
+    "price": 49.99,
+    "details": "Learn the fundamentals of Python programming, including variables, data types, control structures, and basic algorithms."
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/YfCHN50/Rectangle-2-1.png",
+    "credit": 4,
+    "course_name": "Web Development Fundamentals",
+    "price": 79.99,
+    "details": "Explore the world of web development with HTML, CSS, and JavaScript. Build your first website from scratch."
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/xqHk88S/Rectangle-2-2.png",
+    "credit": 5,
+    "course_name": "Data Science with Python",
+    "price": 99.99,
+    "details": "Dive into data analysis, visualization, and machine learning using Python and popular libraries like Pandas and Matplotlib."
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/4WMkHBT/Rectangle-2-3.png",
+    "credit": 3,
+    "course_name": "JavaScript Fundamentals",
+    "price": 59.99,
+    "details": "Master the essentials of JavaScript programming, including variables, functions, DOM manipulation, and event handling."
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/y5Zz3C8/Rectangle-2-4.png",
+    "credit": 4,
+    "course_name": "Full-Stack Web Development",
+    "price": 129.99,
+    "details": "Become a full-stack web developer by learning both front-end (React) and back-end (Node.js) development."
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/G0gJmHq/Rectangle-2-5.png",
+    "credit": 5,
+    "course_name": "Java Programming for Beginners",
+    "price": 69.99,
+    "details": "Start your journey into Java programming. Learn about classes, objects, inheritance, and exception handling."
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co/sCN01pV/Rectangle-2-6.png",
+    "credit": 3,
+    "course_name": "Python for Data Analysis",
+    "price": 89.99,
+    "details": "Focus on Python's data analysis capabilities. Use libraries like NumPy and Pandas to work with data effectively."
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co/YB8k6v4/Rectangle-3.png",
+    "credit": 4,
+    "course_name": "Front-End Web Development with Vue.js",
+    "price": 79.99,
+    "details": "Learn front-end web development with Vue.js framework. Create interactive and dynamic web applications."
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co/9VsmXyd/Rectangle-3-1.png",
+    "credit": 4,
+    "course_name": "C# Programming for Game Development",
+    "price": 109.99,
+    "details": "Explore C# programming and use Unity game engine to create 2D and 3D games for various platforms."
+  }
+]
