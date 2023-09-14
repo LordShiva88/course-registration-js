@@ -5,27 +5,30 @@ import Cart from "./Components/Cart/Cart";
 import { useEffect } from "react";
 
 function App() {
+  const [cards, setCardsData] = useState([]);
+  const [carts, setCart] = useState([]);
+  const [credit, setCredit] = useState();
 
-  const [cards, setCardsData] = useState([])
-  const [carts, setCart] = useState([])
+  useEffect(() => {
+    fetch("data.json")
+      .then((res) => res.json())
+      .then((data) => setCardsData(data));
+  }, []);
 
-  useEffect(()=>{
-    fetch('data.json')
-    .then(res=> res.json())
-    .then(data => setCardsData(data))
-  },[])
-
-  const handleBtn = (card) =>{
-    const cartItem = [...carts, card]
-    const isExist = carts.find(cart => cart.id === card.id)
-    if(isExist){
-      return alert('Already Taken')
-    }else{
-      setCart(cartItem)
+  const handleBtn = (card) => {
+    const cartItem = [...carts, card];
+    const isExist = carts.find((cart) => cart.id === card.id);
+    let credit = 0;
+    if (isExist) {
+      return alert("Already Taken");
+    } else {
+      cartItem.forEach((cartCredit) => {
+        credit = credit + cartCredit.credit;
+        setCredit(credit);
+      });
+      setCart(cartItem);
     }
-    
-  }
-
+  };
 
   return (
     <div className="container mx-auto">
@@ -34,17 +37,12 @@ function App() {
       </h1>
       <div className="flex flex-col lg:flex-row gap-3">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 lg:w-3/4">
-          {
-            cards.map(card => <Card 
-              key={card.id} 
-              card={card}
-              handleBtn={handleBtn}
-              ></Card>
-            )
-          }
+          {cards.map((card) => (
+            <Card key={card.id} card={card} handleBtn={handleBtn}></Card>
+          ))}
         </div>
         <div className="lg:w-1/4">
-          <Cart carts={carts}></Cart>
+          <Cart carts={carts} credit={credit}></Cart>
         </div>
       </div>
     </div>
