@@ -19,17 +19,17 @@
     "id": 3,
     "image": "https://i.ibb.co/xqHk88S/Rectangle-2-2.png",
     "credit": 5,
-    "course_name": "Data Science with Python",
+    "course_name": "Introduction to C++ for DSA",
     "price": 99.99,
-    "details": "Dive into data analysis, visualization, and machine learning using Python and popular libraries like Pandas and Matplotlib."
+    "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
   },
   {
     "id": 4,
     "image": "https://i.ibb.co/4WMkHBT/Rectangle-2-3.png",
     "credit": 3,
-    "course_name": "JavaScript Fundamentals",
+    "course_name": "Introduction to Algorithms",
     "price": 59.99,
-    "details": "Master the essentials of JavaScript programming, including variables, functions, DOM manipulation, and event handling."
+    "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
   },
   {
     "id": 5,
@@ -59,16 +59,16 @@
     "id": 8,
     "image": "https://i.ibb.co/YB8k6v4/Rectangle-3.png",
     "credit": 4,
-    "course_name": "Front-End Web Development with Vue.js",
+    "course_name": "Basic Data Structures",
     "price": 79.99,
-    "details": "Learn front-end web development with Vue.js framework. Create interactive and dynamic web applications."
+    "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
   },
   {
     "id": 9,
     "image": "https://i.ibb.co/9VsmXyd/Rectangle-3-1.png",
     "credit": 4,
-    "course_name": "C# Programming for Game Development",
+    "course_name": "AWS, Cloud Computing",
     "price": 109.99,
-    "details": "Explore C# programming and use Unity game engine to create 2D and 3D games for various platforms."
+    "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
   }
 ]

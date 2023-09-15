@@ -12,7 +12,7 @@ function App() {
   const [carts, setCart] = useState([]);
   const [credit, setCredit] = useState(0);
   const [remaining, setRemaining] = useState(20);
-  const [total, setTotal] = useState(0)
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     fetch("data.json")
