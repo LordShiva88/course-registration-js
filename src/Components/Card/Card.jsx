@@ -15,14 +15,19 @@ const Card = ({ card, handleBtn }) => {
           <div className="flex justify-between">
             <div className="flex gap-2 items-center">
               <FaReadme></FaReadme>
-            <p>Price : {price}</p>
+              <p>Price : {price}</p>
             </div>
             <div className="flex gap-2 items-center">
               <FaReadme></FaReadme>
               <p>Credit: {credit}hr</p>
             </div>
           </div>
-          <button onClick={()=>handleBtn(card)} className="btn bg-sky-500  text-white hover:bg-sky-400 w-full">Select</button>
+          <button
+            onClick={() => handleBtn(card)}
+            className="btn bg-sky-500  text-white hover:bg-sky-400 w-full"
+          >
+            Select
+          </button>
         </div>
       </div>
     </div>
@@ -30,6 +35,6 @@ const Card = ({ card, handleBtn }) => {
 };
 Card.propTypes = {
   card: PropTypes.object.isRequired,
-  handleBtn: PropTypes.func.isRequired
+  handleBtn: PropTypes.func.isRequired,
 };
 export default Card;

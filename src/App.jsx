@@ -4,11 +4,15 @@ import Card from "./Components/Card/Card";
 import Cart from "./Components/Cart/Cart";
 import { useEffect } from "react";
 
+import Swal from 'sweetalert2';
+
+
 function App() {
   const [cards, setCardsData] = useState([]);
   const [carts, setCart] = useState([]);
   const [credit, setCredit] = useState(0);
   const [remaining, setRemaining] = useState(20);
+  const [total, setTotal] = useState(0)
 
   useEffect(() => {
     fetch("data.json")
@@ -20,17 +24,34 @@ function App() {
     const cartItem = [...carts, card];
     const isExist = carts.find((cart) => cart.id === card.id);
     let credit = 0;
+    let totalPrice = 0;
     if (isExist) {
-      return alert("Already Taken");
+      return Swal.fire({
+        title: 'Error!',
+        text: 'Already Take This Course',
+        icon: 'error',
+        confirmButtonText: 'OK',
+      });
     } else {
       cartItem.forEach((cartCredit) => {
         credit = credit + cartCredit.credit;
+        totalPrice =totalPrice+cartCredit.price;
+
+        const totalPrices = parseFloat(totalPrice).toFixed(2)
+        const total = parseInt(totalPrices)
+        console.log(total)
         const remaining = 20 - credit;
-        if(credit > 20){
-          return alert('You Have No Credit')
+        if (credit > 20) {
+          return Swal.fire({
+              title: 'Oops!',
+              text: 'You have not enough credit !!!',
+              icon: 'error',
+              confirmButtonText: 'Try Again',
+            });
         }
-        setRemaining(remaining)
+        setRemaining(remaining);
         setCredit(credit);
+        setTotal(total);
       });
       setCart(cartItem);
     }
@@ -50,8 +71,9 @@ function App() {
         <div className="lg:w-1/4">
           <Cart 
           carts={carts} 
-          credit={credit}
+          credit={credit} 
           remaining={remaining}
+          total={total}
           ></Cart>
         </div>
       </div>
