@@ -1,6 +1,7 @@
 # Discuss about Course Registration Assignment
 
 **Add at least 3 Project features**
+[live](https://courseregistrationliton.netlify.app/)
 
 * Implement a shopping cart system that allows users to add items to their cart from a product catalog.
 * Display the selected items in a cart with details like item name, quantity, price, and a subtotal for each item.
